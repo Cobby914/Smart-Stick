@@ -7,11 +7,11 @@ import time
 import threading 
 
 #CONFIGURATION
-ENDPOINT = "adltf2v5jz5kx-ats.iot.us-east-2.amazonaws.com" 
+ENDPOINT = "REPLACE_WITH_AWS_IOT_ENDPOINT" 
 CLIENT_ID = "SmartStick_Grapher"
-PATH_TO_CERT = "/Users/colinkwon/Documents/connect_device_package/Smart_Stick.cert.pem"
-PATH_TO_KEY = "/Users/colinkwon/Documents/connect_device_package/Smart_Stick.private.key"
-PATH_TO_ROOT = "/Users/colinkwon/Documents/connect_device_package/root-CA.crt"
+PATH_TO_CERT = "REPLACE_WITH_CERT_PATH"
+PATH_TO_KEY = "REPLACE_WITH_PRIVATE_KEY_PATH"
+PATH_TO_ROOT = "REPLACE_WITH_ROOT_CA_PATH"
 TOPIC = "smartstick/sensors"
 
 # AUDIO SETUP
