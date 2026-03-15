@@ -1,8 +1,8 @@
 #include <pgmspace.h>
 
-const char WIFI_SSID[] = "REPLACE_WITH_WIFI_SSID";
-const char WIFI_PASSWORD[] = "REPLACE_WITH_WIFI_PASSWORD";
-const char AWS_IOT_ENDPOINT[] = "REPLACE_WITH_AWS_IOT_ENDPOINT"; // e.g. xxxx-ats.iot.<region>.amazonaws.com
+// Keep non-secret CA cert in source control.
+// Load all device-specific secrets from Secrets.local.h (gitignored).
+#include "Secrets.local.h"
 
 // Amazon Root CA 1
 static const char AWS_CERT_CA[] PROGMEM = R"EOF(
@@ -29,11 +29,7 @@ rqXRfboQnoZsG4q5WTP468SQvvG5
 )EOF";
 
 // Device Certificate
-static const char AWS_CERT_CRT[] PROGMEM = R"EOF(
-REPLACE_WITH_DEVICE_CERTIFICATE_PEM
-)EOF";
+// Provided by Secrets.local.h as AWS_CERT_CRT
 
 // Private Key
-static const char AWS_CERT_PRIVATE[] PROGMEM = R"EOF(
-REPLACE_WITH_PRIVATE_KEY_PEM
-)EOF";
+// Provided by Secrets.local.h as AWS_CERT_PRIVATE
